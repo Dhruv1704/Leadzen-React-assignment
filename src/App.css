@@ -33,6 +33,7 @@ body{
     border-radius: 15px;
     background: #fb3e3e;
     border: none;
+    cursor: pointer;
     padding: 10px;
 }
 
