@@ -3,14 +3,16 @@ import MoreInfo from "./MoreInfo"
 
 function Card(props){
     //eslint-disable-next-line
-    const {name, username, email, address, phone, website, company} = props
+    const {name, username, email, address, phone, website, company, index} = props
     const [button, setButton] = useState("View");
 
-    const viewDetails = ()=>{
+    const viewDetails = (index)=>{
         if(button === "View"){
             setButton("Hide")
+            document.getElementsByClassName("more-info")[index].style.display = "block"
         }else{
             setButton("View")
+            document.getElementsByClassName("more-info")[index].style.display = "none"
         }
     }
 
@@ -33,11 +35,11 @@ function Card(props){
                     {website}
                 </div>
                 <div className={"info"}>
-                    <button onClick={viewDetails} className={"button"}>{button} Details</button>
+                    <button onClick={()=>viewDetails(index)} className={"button"}>{button} Details</button>
                 </div>
-                <MoreInfo name={name} username = {username} address = {address} company={company}
-                          phone={phone} website={website} email={email}/>
             </div>
+            <MoreInfo name={name} username = {username} address = {address} company={company}
+                      phone={phone} website={website} email={email}/>
         </div>
     )
 }

@@ -39,3 +39,19 @@ body{
 .button:active{
     transform: scale(1.1);
 }
+
+.more-info{
+    margin: 45px 45px 0 45px;
+    padding: 10px 30px 25px;
+    border: 2px solid rgb(232, 233, 235);
+    border-radius: 10px;
+    display: none;
+}
+
+.more-info-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+

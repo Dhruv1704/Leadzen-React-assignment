@@ -23,7 +23,7 @@ function MainPage(){
         <div className={"row"}>
             {article.slice(0,3).map((element, index)=>{
                 return <Card name={element.name} username = {element.username} address = {element.address} company={element.company}
-                             phone={element.phone} website={element.website} email={element.email} key={index}/>
+                             phone={element.phone} website={element.website} email={element.email} key={index} index={index}/>
             })}
         </div>
     )
