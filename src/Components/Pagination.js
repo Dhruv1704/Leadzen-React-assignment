@@ -7,12 +7,16 @@ function Pagination(props){
 
     const pageChange = (page)=>{
         setCurrentPage(page)
+        for (let i = 0; i < pages.length; i++) {
+        document.getElementById(`page-button${pages[i]}`).style.background = "#fb3e3e"
+        }
+        document.getElementById(`page-button${page}`).style.background = "darkred"
     }
 
     return(
         <div className={"page"}>
             {pages.map((page, index)=>{
-                return <button key={index} className={"page-button"} onClick={()=>pageChange(pages[index])}>{page}</button>
+                return <button key={index} className={"page-button"} id={`page-button${pages[index]}`} onClick={()=>pageChange(pages[index])}>{page}</button>
             })}
         </div>
     )

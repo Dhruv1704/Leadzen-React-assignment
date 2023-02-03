@@ -69,3 +69,7 @@ body{
     padding: 8px 15px;
     cursor: pointer;
 }
+
+#page-button1{
+    background: darkred;
+}
